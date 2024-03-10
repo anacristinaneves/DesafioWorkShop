@@ -1,0 +1,109 @@
+/*Estilos para a página de visualizar pokemons*/
+* {
+    font-family: Arial, sans-serif;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: none;
+}
+
+header {
+    background-color: #007bff; 
+    padding: 50px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+}
+
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pokemon-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.pokemon-details h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.pokemon-details img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pokemon-details h3 {
+    padding: 10px 10px;
+}
+
+.pokemon-details ul {
+    list-style: none;
+}
+
+.pokemon-details ul li {
+    font-weight: bold;
+}
+
+
+.btn-salir ul {
+    list-style: none;
+    text-align: center;
+}
+
+.btn-salir ul li {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 25%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn-salir ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.btn-salir ul li:hover {
+    padding: 15px 25px;
+    cursor: pointer;
+    background-color: #0056b3; 
+    font-weight: bold;
+}
+
+.btn-salir ul li a:hover {
+    font-weight: bold;
+    box-shadow: 0 0 10px #0056b3; 
+}
+
+footer {
+    background-color: #e0e0e0;
+    padding: 170px;
+    color: black;
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+

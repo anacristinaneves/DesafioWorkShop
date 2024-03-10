@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-se</title>
+    <link rel="stylesheet" href="{% static 'cadastrar.css' %}">
+    <meta name = "descrição" content="Registro de usuario">
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <h2>Registro</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registrar-se</button>
+        </form>
+        <p>Já tem conta? <a href="{% url 'iniciar_sessao' %}">Inicia sessão</a></p>
+    </div>
+
+    <div class="footer"></div>
+</body>
+</html>

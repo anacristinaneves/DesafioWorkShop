@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta name = "descrição" content="Pagina principal">
+</head>
+<body>
+    <main>
+        <div id="container">
+            <header id="pageheader">
+                <div id="ph__container">
+                    <img src="/static/img/logo.png" alt="pokedex" id="ph__logo">
+                    <h1 id="ph__title">Pokédex</h1>  
+                </div>
+            </header>
+     <main id="containermain">
+          <section id="pokemonscontainer">
+                <h2 id="pc__title">Pokémon</h2>
+                    <ul id="pc__list">
+
+        <ul class="pokemon-list">
+            {% for resultado in resultados %}
+                <li class="pokemon-card">
+                    <img src="{% static 'img/pokebola.png' %}" alt="Pokebola">
+                    <h3>{{ resultado.name }}</h3>
+                    <a href="{% url 'visualizar_pokemon' resultado.name %}" class="ver-pokemon-btn">Ver informação</a>
+                </li>
+            {% endfor %}
+        </ul> 
+    </main>
+
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'encerrar_sessao' %}">Encerrar sessão</a></li>
+                <form action="{% url 'encerrar_sessao' %}" method="post" id="logout-form">
+                    {% csrf_token %}
+                </form>
+            {% else %}
+                <li><a href="{% url 'iniciar_sessao' %}">Iniciar Sessão</a></li>
+                <li><a href="{% url 'cadastrar_usuario' %}">Cadastrar-se</a></li> 
+            {% endif %}
+        </ul>
+    </nav>
+</body>
+</html>

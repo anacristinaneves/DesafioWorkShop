@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Pokémon</title>
+    <link rel="stylesheet" href="{% static 'vzl_pokemon.css' %}">
+    <meta name = "descrição" content="Ver pokemons">
+</head>
+<body>
+    <header>
+        <h1>informação do Pokemon</h1>
+    </header>
+    <main>
+        <div class="pokemon-details">
+            {% if pokemon %}
+                <h2>{{ pokemon.name|title }}</h2>
+                <img src="{{ pokemon.sprites.front_default }}" alt="{{ pokemon.name }}">
+                <h3>Habilidades:</h3>
+                <ul>
+                    {% for ability in pokemon.abilities %}
+                        <li>{{ ability.ability.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="mensagem_erro">{{ mensagem_erro }}</p>
+            {% endif %}
+        </div>
+        <div class="btn-salir">
+            <ul>
+                <li><a href="{% url 'pagina_principal' %}"> Voltar </a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
