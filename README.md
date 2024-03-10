@@ -1,5 +1,6 @@
 # DesafioWorkShop
 Repositório destinado para o desafio proposto no ultimo dia de workshop no projeto de extensão ''Fábrica de Software" na área de back-end.
+O projeto implementa um aplicativo Django que consome a PokeAPI (uma API que fornece informações sobre Pokémon) e permite que os usuários visualizem detalhes sobre os Pokémon, se registrem, iniciem e encerrem a sessão.
 
 ## Exigências
 - Python 
