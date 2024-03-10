@@ -6,11 +6,11 @@ Repositório destinado para o desafio proposto no ultimo dia de workshop no proj
 - Django 
 
 ## Estrutura
--Consumo de API (POKEAPI)
--Front 
--Validação de usuário com e-mail e senha.
+- Consumo de API (POKEAPI)
+- Front 
+- Validação de usuário com e-mail e senha.
 
-## Instrução
+## Instruções
 
 ### Clonar o repositório do projeto:
 ```
